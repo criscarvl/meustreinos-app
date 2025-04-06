@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="salvar()">
+  <label>Nome:</label>
+  <input formControlName="nome" />
+
+  <label>Subdescrição:</label>
+  <input formControlName="subdescricao" />
+
+  <h3>Adicionar Exercícios ao Treino</h3>
+  <div *ngFor="let exercicio of exerciciosDisponiveis">
+    <button type="button" (click)="adicionarExercicio(exercicio.id!)">
+      + {{ exercicio.nome }}
+    </button>
+  </div>
+
+  <h3>Exercícios selecionados:</h3>
+  <ol>
+    <li *ngFor="let e of exercicios.controls; let i = index">
+      Exercício ID: {{ e.value.exercicioId }} (Ordem: {{ e.value.ordem }})
+    </li>
+  </ol>
+
+  <button type="submit">Salvar Treino</button>
+</form>

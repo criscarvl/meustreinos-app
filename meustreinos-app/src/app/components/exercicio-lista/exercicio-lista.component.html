@@ -1,0 +1,14 @@
+<h2>Lista de Exercícios</h2>
+
+<ul *ngIf="exercicios.length > 0; else nenhum">
+  <li *ngFor="let exercicio of exercicios">
+    <strong>{{ exercicio.nome }}</strong> - {{ exercicio.series }}x{{ exercicio.repeticoes }}
+    <br />
+    {{ exercicio.descricao }}
+    <hr />
+  </li>
+</ul>
+
+<ng-template #nenhum>
+  <p>Nenhum exercício cadastrado.</p>
+</ng-template>

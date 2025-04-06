@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="salvar()">
+  <label>Nome da Ficha:</label>
+  <input formControlName="nome" />
+
+  <div *ngFor="let treino of treinos">
+    <input
+      type="checkbox"
+      [checked]="isSelecionado(treino.id!)"
+      (change)="toggleTreino(treino.id!)"
+    />
+    {{ treino.nome }}
+  </div>
+
+  <button type="submit">Salvar</button>
+</form>

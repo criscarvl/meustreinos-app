@@ -1,0 +1,24 @@
+<form [formGroup]="form" (ngSubmit)="salvar()">
+  <label>Nome:</label>
+  <input formControlName="nome" placeholder="Nome do exercício" />
+  <div *ngIf="form.get('nome')?.invalid && form.get('nome')?.touched">
+    Informe o nome do exercício
+  </div>
+
+  <label>Séries:</label>
+  <input formControlName="series" type="number" placeholder="Séries" />
+  <div *ngIf="form.get('series')?.invalid && form.get('series')?.touched">
+    Informe a quantidade de séries
+  </div>
+
+  <label>Repetições:</label>
+  <input type="number" formControlName="repeticoes" />
+
+  <label>Descrição:</label>
+  <textarea formControlName="descricao"></textarea>
+
+  <label>Vídeo:</label>
+  <input type="file" (change)="onFileChange($event)" accept="video/*" />
+
+  <button type="submit">Salvar</button>
+</form>

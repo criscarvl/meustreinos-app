@@ -1,0 +1,20 @@
+<h2>Treino A (peitoral, ombro e tríceps)</h2>
+
+<video width="250px" controls [attr.src]="getVideoUrl()" *ngIf="exercicioAtual?.videoFileName"></video>
+
+<h3>{{ exercicioAtual.nome }}</h3>
+
+<p><i>{{ exercicioAtual.descricao }}</i></p>
+
+<textarea placeholder="Texto (opcional)"></textarea>
+
+<div *ngFor="let s of [].constructor(exercicioAtual.series); let i = index">
+  <label>Série {{ i + 1 }}:</label>
+  <input type="text" [(ngModel)]="pesos[i]" placeholder="Peso usado" />
+</div>
+
+<div style="margin-top: 20px;">
+  <button (click)="anterior()" [disabled]="exercicioAtualIndex === 0">Anterior</button>
+  <button (click)="proximo()" [disabled]="exercicioAtualIndex === exercicios.length - 1">Próximo</button>
+  <button (click)="finalizarTreino()">Finalizar treino</button>
+</div>

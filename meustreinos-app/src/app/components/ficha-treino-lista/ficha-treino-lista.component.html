@@ -1,0 +1,14 @@
+<h2>Fichas de Treino</h2>
+
+<ul *ngIf="fichas.length > 0; else vazio">
+  <li *ngFor="let ficha of fichas">
+    <strong>{{ ficha.nome }}</strong>
+    <ul>
+      <li *ngFor="let treino of ficha.treinos">{{ treino.nome }}</li>
+    </ul>
+  </li>
+</ul>
+
+<ng-template #vazio>
+  <p>Nenhuma ficha cadastrada.</p>
+</ng-template>
