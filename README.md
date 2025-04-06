@@ -82,11 +82,4 @@ Frontend estará disponível em: [http://localhost:4200](http://localhost:4200)
 
 ---
 
-## 🧑‍💻 Desenvolvedor
-
-**Cristian Carvalho**  
-GitHub: [@criscarvl](https://github.com/criscarvl)
-
----
-
 🧠 *Projeto em desenvolvimento para organização de treinos pessoais e estudo de tecnologias modernas.*
