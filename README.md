@@ -48,20 +48,16 @@ Aplicativo web para cadastro, organização e execução de treinos personalizad
 ### Backend
 
 ```bash
-# Navegue até o projeto Spring
-cd backend
-
-# Rode a aplicação (pode ser via IntelliJ ou terminal)
+# Na raiz do projeto rode a aplicação (pode ser via IntelliJ ou terminal)
 ./mvnw spring-boot:run
 ```
+
+A aplicação estará disponível em: [http://localhost:8080](http://localhost:8080)
 
 ### 💻 Frontend
 
 ```bash
-# Navegue até o frontend Angular
-cd frontend
-
-# Instale as dependências
+# Na raiz do projeto, instale as dependências
 npm install
 
 # Rode o projeto
